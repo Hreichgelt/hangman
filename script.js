@@ -45,3 +45,37 @@ for (var i = 0; i < word.length; i++) {
         }
 }
 }
+
+// end the game, show the answer and ask if they want to play again
+alert(answerArray.join(" "));
+alert("Good Work! The correct answer was " + word);
+
+// program functions 
+
+var word = pickWord();
+var answerArray = setupAnswerArray(word);
+var remainderLetters = word.length;
+var pickWord = function () {
+    // return random word
+};
+
+var setupAnswerArray = function (word) {
+    // return answer array
+};
+
+var showPlayerProgress = function (answerArray) {
+    // alert to show player progress
+};
+
+var getGuess = function () {
+    // prompt to get guess
+};
+
+var updateGameState = function (guess, word, answerArray) {
+    // update answerArray and return a number showing how many times the guess appears in the word 
+    // so that remainderLetters can be updated
+};
+
+var showAnswerAndCongratulate = function (answerArray) {
+    // use alert to show answer congrats and new game
+};
