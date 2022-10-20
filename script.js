@@ -79,3 +79,18 @@ var updateGameState = function (guess, word, answerArray) {
 var showAnswerAndCongratulate = function (answerArray) {
     // use alert to show answer congrats and new game
 };
+
+while (remainderLetters > 0) {
+    showPlayerProgress(answerArray);
+    var guess = getGuess();
+    if (guess === null) {
+        break;
+    } else if (guess.length !== 1) {
+        alert("Please enter a single letter.");
+    } else {
+        var correctGuess = updateGameState(guess, word, answerArray);
+        remainderLetters -= correctGuess;
+    }
+}
+
+showAnswerAndCongratulate(answerArray);
