@@ -25,3 +25,23 @@ var word = words[Math.floor(Math.random() * words.length)];
 for (var i = 0; i < word.length; i++) {
     answerArray[i] = "_";
 }
+
+var remainderLetters  = word.length;
+
+// need while loop for the game flow. 
+while (remainderLetters > 0) {
+// keep track of player progress with alert
+// retrieve player guess
+// update game from most recent guess 
+var guess = prompt("Guess a letter or click cancel to stop game.");
+if (guess == null) {
+    break;
+} else if (guess.length !== 1) {
+    alert("Please enter a valid letter")
+} else //update with users guess
+for (var i = 0; i < word.length; i++) {
+    if (word[i] === guess) {
+        answerArray[i] = guess; remainderLetters--;
+        }
+}
+}
